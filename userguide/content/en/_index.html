@@ -7,33 +7,34 @@ linkTitle = "Kubeprober"
 {{< blocks/cover title="Welcome to Kubeprober!" image_anchor="top" height="full" color="orange" >}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/guides/install.html" target="_blank">
-		快速开始 <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+		Quick Start <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/erda-project/kubeprober" target="_blank">
 		Github <i class="fab fa-github ml-2 "></i>
 	</a>
-	<p class="lead mt-5">大规模 Kubernetes 集群诊断系统，用云原生的方式诊断大规模云原生系统</p>
+	<p class="lead mt-5">Large-scale Kubernetes cluster diagnosis system, using cloud-native methods to diagnose large-scale cloud-native systems</p>
 	{{< blocks/link-down color="info" >}}
 </div>
 {{< /blocks/cover >}}
 
 
 {{% blocks/lead color="primary" %}}
-KubeProber 是一个针对大规模 Kubernetes 集群设计的诊断工具，用于在 kubernetes 集群中执行诊断项以证明集群的各项功能是否正常，采用云原生的方式来编排以及运行你的诊断项，支持用户自定义诊断项，同时依托底层的集群管理架构可实现针对大规模 Kubernetes 集群的统一运维管理{{% /blocks/lead %}}
+KubeProber is a diagnostic tool designed for large-scale Kubernetes clusters. It is used to perform diagnostic items in the kubernetes cluster to prove whether the cluster's functions are normal. It uses a cloud-native way to organize and run your diagnostic items, and supports user customization. Diagnostic items, and relying on the underlying cluster management architecture to achieve unified operation and maintenance management for large-scale Kubernetes clusters{{% /blocks/lead %}}
 
 {{< blocks/section color="dark" type="features">}}
-{{% blocks/feature icon="fab fa-soundcloud" title="云原生 !" url="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/concepts/cluster_crd.html" %}}
-核心逻辑采用 Operator 来实现，提供完整的Kubernetes API兼容性
+{{% blocks/feature icon="fab fa-soundcloud" title="Cloud Native !" url="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/concepts/cluster_crd.html" %}}
+The core logic is implemented by Operator, providing complete Kubernetes API compatibility.
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fas fa-th" title="大规模 !" url="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/concepts/arch.html" %}}
-采用 Master/Agent 的架构来管理海量集群，基于 WebSocket 连接理论支持的集群数量无上限
+{{% blocks/feature icon="fas fa-th" title="Large Scale !" url="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/concepts/arch.html" %}}
+
+The Master/Agent architecture is used to manage a large number of clusters, and the number of clusters supported based on the WebSocket connection theory is unlimited.
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="开源 !" url="https://github.com/erda-project/kubeprober/blob/master/CONTRIBUTING.md" %}}
-遵循 Apache 2.0 许可证，如果您对本项目想做出贡献，请参考 Contributing to KubeProber。
+{{% blocks/feature icon="fab fa-github" title="Open Source !" url="https://github.com/erda-project/kubeprober/blob/master/CONTRIBUTING.md" %}}
+Follow the Apache 2.0 license, if you want to contribute to this project, please refer to Contributing to KubeProber.
 {{% /blocks/feature %}}
 
 

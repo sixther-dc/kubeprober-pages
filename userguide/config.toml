@@ -53,32 +53,58 @@ quality = 75
 anchor = "smart"
 
 # Additional menu items
-[[menu.main1]]
+[[menu.cn]]
     name = "主页"
-    weight = 30
+    weight = 20
     url = "#"
     pre = "<i class='fas fa-home'></i>"
-[[menu.main1]]
+[[menu.cn]]
     name = "文档"
     weight = 30
     url = "https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/guides/install.html"
     pre = "<i class='fas fa-file-alt'></i>"
-[[menu.main1]]
+[[menu.cn]]
     name = "尔达云"
     weight = 40
     url = "https://www.erda.cloud"
     pre = "<i class='fas fa-cloud'></i>"
-[[menu.main1]]
+[[menu.cn]]
     name = "端点"
     weight = 45
     url = "https://www.terminus.io"
     pre = "<i class='fas fa-globe'></i>"
-[[menu.main1]]
+[[menu.cn]]
     name = "GitHub"
     weight = 50
     url = "https://github.com/erda-project/kubeprober"
     pre = "<i class='fab fa-github'></i>"
-    post = "<span class='alert'>New!</span>"
+
+[[menu.en]]
+    name = "Home"
+    weight = 20
+    url = "#"
+    pre = "<i class='fas fa-home'></i>"
+[[menu.en]]
+    name = "Document"
+    weight = 30
+    url = "https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/guides/install.html"
+    pre = "<i class='fas fa-file-alt'></i>"
+[[menu.en]]
+    name = "Erda Cloud"
+    weight = 40
+    url = "https://www.erda.cloud"
+    pre = "<i class='fas fa-cloud'></i>"
+[[menu.en]]
+    name = "Terminus"
+    weight = 45
+    url = "https://www.terminus.io"
+    pre = "<i class='fas fa-globe'></i>"
+[[menu.en]]
+    name = "GitHub"
+    weight = 50
+    url = "https://github.com/erda-project/kubeprober"
+    pre = "<i class='fab fa-github'></i>"
+
 
 [services]
 [services.googleAnalytics]
@@ -94,6 +120,13 @@ description = "Kubeprober website"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
+[languages.cn]
+title = "Kubeprober"
+description = "Kubeprober website"
+languageName ="简体中文"
+contentDir = "content/cn"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
 
 [markup]
   [markup.goldmark]
