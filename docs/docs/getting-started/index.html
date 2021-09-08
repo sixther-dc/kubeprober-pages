@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="alternate" type="application/rss&#43;xml" href="/docs/getting-started/index.xml">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Getting Started | Kubeprober</title>
+
+
+  <meta name="description" content="This page tells you how to get started with the Docsy theme, including installation and basic configuration.
+">
+<meta property="og:title" content="Getting Started" />
+<meta property="og:description" content="This page tells you how to get started with the Docsy theme, including installation and basic configuration.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/getting-started/" /><meta property="og:site_name" content="Kubeprober" />
+
+<meta itemprop="name" content="Getting Started">
+<meta itemprop="description" content="This page tells you how to get started with the Docsy theme, including installation and basic configuration.
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Getting Started"/>
+<meta name="twitter:description" content="This page tells you how to get started with the Docsy theme, including installation and basic configuration.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.aac3af70223c0376079ec26267814fb6b5e5c8c200dba630ab71d25aa35eb1bd.css" as="style">
+<link href="/scss/main.min.aac3af70223c0376079ec26267814fb6b5e5c8c200dba630ab71d25aa35eb1bd.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-00000000-0', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg t="1631104074107" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="2047" width="32" height="32" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style/></defs><path d="M512 627.2c-134.4.0-249.6-108.8-249.6-249.6C262.4 243.2 377.6 128 512 128s249.6 108.8 249.6 249.6S646.4 627.2 512 627.2" fill="#fe6d68" p-id="2048"/><path d="M377.6 896C243.2 896 128 780.8 128 646.4S236.8 396.8 377.6 396.8c134.4.0 249.6 108.8 249.6 249.6.0 134.4-108.8 249.6-249.6 249.6" fill="#5b8fd9" p-id="2049"/><path d="M646.4 896C512 896 396.8 787.2 396.8 646.4c0-134.4 108.8-249.6 249.6-249.6 134.4.0 249.6 108.8 249.6 249.6C896 780.8 780.8 896 646.4 896" fill="#f9d65d" p-id="2050"/></svg></span><span class="text-uppercase font-weight-bold">Kubeprober</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/#" ><i class='fas fa-home'></i><span>主页</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/guides/install.html" target="_blank" ><i class='fas fa-file-alt'></i><span>文档</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://www.erda.cloud" target="_blank" ><i class='fas fa-cloud'></i><span>尔达云</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://www.terminus.io" target="_blank" ><i class='fas fa-globe'></i><span>端点</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://github.com/erda-project/kubeprober" target="_blank" ><i class='fab fa-github'></i><span>GitHub</span><span class='alert'>New!</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-docsgetting-started").addClass("active"); 
+    $("#td-section-nav #m-docsgetting-started-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsgetting-started").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-docsgetting-started-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsgetting-started-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
+  <a href="/docs/" title="Welcome to Docsy" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <a href="/docs/getting-started/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedquickstart-docker-li">
+  <a href="/docs/getting-started/quickstart-docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedquickstart-docker"><span class="">Docker Quickstart</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsadding-content-li">
+  <a href="/docs/adding-content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsadding-content"><span class="">Content and Customization</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentcontent-li">
+  <a href="/docs/adding-content/content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentcontent"><span class="">Adding Content</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentlookandfeel-li">
+  <a href="/docs/adding-content/lookandfeel/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentlookandfeel"><span class="">Look and Feel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentnavigation-li">
+  <a href="/docs/adding-content/navigation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentnavigation"><span class="">Navigation and Search</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentversioning-li">
+  <a href="/docs/adding-content/versioning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentversioning"><span class="">Doc Versioning</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentshortcodes-li">
+  <a href="/docs/adding-content/shortcodes/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentshortcodes"><span class="">Docsy Shortcodes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contenticonsimages-li">
+  <a href="/docs/adding-content/iconsimages/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contenticonsimages"><span class="">Logos and Images</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentprint-li">
+  <a href="/docs/adding-content/print/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentprint"><span class="">Print Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentfeedback-li">
+  <a href="/docs/adding-content/feedback/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentfeedback"><span class="">Analytics, User Feedback, SEO</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentrepository-links-li">
+  <a href="/docs/adding-content/repository-links/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentrepository-links"><span class="">Repository Links</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contenttaxonomy-li">
+  <a href="/docs/adding-content/taxonomy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contenttaxonomy"><span class="">Taxonomy Support</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-li">
+  <a href="/docs/language/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docslanguage"><span class="">Multi-language Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeployment-li">
+  <a href="/docs/deployment/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeployment"><span class="">Previews and Deployment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexamples-li">
+  <a href="/docs/examples/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsexamples"><span class="">Examples</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsupdating-li">
+  <a href="/docs/updating/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsupdating"><span class="">Updating Docsy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbest-practices-li">
+  <a href="/docs/best-practices/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsbest-practices"><span class="">Best Practices</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbest-practicessite-guidance-li">
+  <a href="/docs/best-practices/site-guidance/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsbest-practicessite-guidance"><span class="">Hugo Content Tips</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbest-practicesorganizing-content-li">
+  <a href="/docs/best-practices/organizing-content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsbest-practicesorganizing-content"><span class="">Organizing Your Content</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscontribution-guidelines-li">
+  <a href="/docs/contribution-guidelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscontribution-guidelines"><span class="">Contribution Guidelines</span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="https://github.com/google/docsy/edit/master/userguide/content/en/docs/Getting%20started/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+    <a href="https://github.com/google/docsy/new/master/userguide/content/en/docs/Getting%20started/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+    <a href="https://github.com/google/docsy/issues/new?title=Getting%20Started" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+    
+      
+      <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+    
+
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites-and-installation">Prerequisites and installation</a>
+      <ul>
+        <li><a href="#use-our-docker-image">Use our Docker image</a></li>
+        <li><a href="#install-hugo">Install Hugo</a></li>
+        <li><a href="#install-postcss">Install PostCSS</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-the-theme">Using the theme</a>
+      <ul>
+        <li><a href="#option-1-copy-the-docsy-example-site">Option 1: Copy the Docsy example site</a></li>
+        <li><a href="#option-2-use-the-docsy-theme-in-your-own-site">Option 2: Use the Docsy theme in your own site</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-site-configuration">Basic site configuration</a>
+      <ul>
+        <li><a href="#internationalization">Internationalization</a></li>
+        <li><a href="#search">Search</a></li>
+      </ul>
+    </li>
+    <li><a href="#known-issues">Known issues</a>
+      <ul>
+        <li><a href="#macos-1">MacOS</a></li>
+        <li><a href="#windows-subsystem-for-linux-wsl">Windows Subsystem for Linux (WSL)</a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s next?</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      
+        <h5 class="taxonomy-title">Categories</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/categories/taxonomies/" data-taxonomy-term="taxonomies"><span class="taxonomy-label">Taxonomies</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+	
+		
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      
+        <h5 class="taxonomy-title">Tags</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/tags/labelling/" data-taxonomy-term="labelling"><span class="taxonomy-label">Labelling</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/structuring-content/" data-taxonomy-term="structuring-content"><span class="taxonomy-label">Structuring Content</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/tagging/" data-taxonomy-term="tagging"><span class="taxonomy-label">Tagging</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/getting-started/">Getting Started</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Getting Started</h1>
+  <div class="lead">This page tells you how to get started with the Docsy theme, including installation and basic configuration.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>
+	<h2 id="prerequisites-and-installation">Prerequisites and installation</h2>
+<h3 id="use-our-docker-image">Use our Docker image</h3>
+<p>We provide a Docker image that you can use to run and test your Docsy site
+locally, without having to install all Docsy&rsquo;s dependencies.</p>
+<p>You can see how to get started with this approach by following our <a href="quickstart-docker">Docker
+Quickstart tutorial</a>. If you don&rsquo;t want to use Docker,
+follow the instructions below to install Hugo and PostCSS.</p>
+<h3 id="install-hugo">Install Hugo</h3>
+<p>You need a <a href="https://github.com/gohugoio/hugo/releases">recent <strong>extended</strong> version</a> (we recommend version 0.75.0 or later) of <a href="https://gohugo.io/">Hugo</a> to do local builds and previews of sites (like this one) that use Docsy. If you install from the release page, make sure to get the <code>extended</code> Hugo version, which supports <a href="https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html">SCSS</a>; you may need to scroll down the list of releases to see it.</p>
+<p>For comprehensive Hugo documentation, see <a href="https://gohugo.io/">gohugo.io</a>.</p>
+<h4 id="linux">Linux</h4>
+<p>Be careful using <code>sudo apt-get install hugo</code>, as it <a href="https://gohugo.io/getting-started/installing/#debian-and-ubuntu">doesn&rsquo;t get you the <code>extended</code> version for all Debian/Ubuntu versions</a>, and may not be up-to-date with the most recent Hugo version.</p>
+<p>If you&rsquo;ve already installed Hugo, check your version:</p>
+<pre tabindex="0"><code>hugo version
+</code></pre><p>If the result is <code>v0.75</code> or earlier, or if you don&rsquo;t see <code>Extended</code>, you&rsquo;ll need to install the latest version. You can see a complete list of Linux installation options in <a href="https://gohugo.io/getting-started/installing/#linux">Install Hugo</a>. The following shows you how to install Hugo from the release page:</p>
+<ol>
+<li>
+<p>Go to the <a href="https://github.com/gohugoio/hugo/releases">Hugo releases</a> page.</p>
+</li>
+<li>
+<p>In the most recent release, scroll down until you find a list of
+<strong>Extended</strong> versions.</p>
+</li>
+<li>
+<p>Download the latest extended version (<code>hugo_extended_0.5X_Linux-64bit.tar.gz</code>).</p>
+</li>
+<li>
+<p>Create a new directory:</p>
+<pre><code>mkdir hugo
+</code></pre>
+</li>
+<li>
+<p>Extract the files you downloaded to <code>hugo</code>.</p>
+</li>
+<li>
+<p>Switch to your new directory:</p>
+<pre><code>cd hugo
+</code></pre>
+</li>
+<li>
+<p>Install Hugo:</p>
+<pre><code>sudo install hugo /usr/bin    
+</code></pre>
+</li>
+</ol>
+<h4 id="macos">macOS</h4>
+<p>Install Hugo using <a href="https://gohugo.io/getting-started/installing/#homebrew-macos">Brew</a>.</p>
+<h4 id="as-an-npm-module">As an <code>npm</code> module</h4>
+<p>You can install Hugo as an <code>npm</code> module using <a href="https://www.npmjs.com/package/hugo-bin"><code>hugo-bin</code></a>. This adds <code>hugo-bin</code> to your <code>node_modules</code> folder and adds the dependency to your <code>package.json</code> file.  To install the extended version of Hugo:</p>
+<pre tabindex="0"><code>npm install hugo-extended --save-dev
+</code></pre><p>See the <a href="https://www.npmjs.com/package/hugo-bin"><code>hugo-bin</code> documentation</a> for usage details.</p>
+<h3 id="install-postcss">Install PostCSS</h3>
+<p>To build or update your site&rsquo;s CSS resources, you also need <a href="https://postcss.org/"><code>PostCSS</code></a> to create the final assets. If you need to install it, you must have a recent version of <a href="https://nodejs.org/en/">NodeJS</a> installed on your machine so you can use <code>npm</code>, the Node package manager. By default <code>npm</code> installs tools under the directory where you run <a href="https://docs.npmjs.com/cli/v6/commands/npm-install#description"><code>npm install</code></a>:</p>
+<pre tabindex="0"><code>sudo npm install -D autoprefixer
+sudo npm install -D postcss-cli
+</code></pre><p>Starting in <a href="https://github.com/postcss/postcss-cli/blob/master/CHANGELOG.md">version 8 of <code>postcss-cli</code></a>, you must also separately install <code>postcss</code>:</p>
+<pre tabindex="0"><code>sudo npm install -D postcss
+</code></pre><p>Note that versions of <code>PostCSS</code> later than 5.0.1 will not load <code>autoprefixer</code> if installed <a href="https://flaviocopes.com/npm-packages-local-global/">globally</a>, you must use a local install.</p>
+<h2 id="using-the-theme">Using the theme</h2>
+<p>To use the Docsy Hugo theme, you have a couple of options:</p>
+<ul>
+<li><strong>Copy and edit the source for the <a href="https://github.com/google/docsy-example">Docsy example site</a>.</strong> This approach gives you a skeleton structure for your site, with top-level and documentation sections and templates that you can modify as necessary. The example site uses Docsy as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodule</a>, so it&rsquo;s easy to <a href="/docs/updating/">keep up to date</a>.</li>
+<li><strong>Build your own site using the Docsy theme.</strong> Specify the <a href="https://github.com/google/docsy">Docsy theme</a> like any other <a href="https://gohugo.io/themes/">Hugo theme</a> when creating or updating your site. With this option, you&rsquo;ll get Docsy look and feel, navigation, and other features, but you&rsquo;ll need to specify your own site structure.</li>
+</ul>
+<h3 id="option-1-copy-the-docsy-example-site">Option 1: Copy the Docsy example site</h3>
+<p>The <a href="https://example.docsy.dev">Example Site</a> gives you a good starting point for building your docs site and is
+pre-configured to use the Docsy theme as a Git submodule. You can copy the Example Site either by:</p>
+<ul>
+<li><a href="#using-the-github-ui">Using the GitHub UI</a></li>
+<li><a href="#using-the-command-line">Using the command line</a></li>
+</ul>
+<h4 id="using-the-github-ui">Using the GitHub UI</h4>
+<p>This is the simplest approach, as the Docsy example site repo is a <a href="https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/">template repository</a>. To create your own copy of the Docsy example site repo:</p>
+<ol>
+<li>
+<p>Go to the <a href="https://github.com/google/docsy-example">repo page</a> and click <strong>Use this template</strong>.</p>
+</li>
+<li>
+<p>Type your chosen name for your new repository in the <strong>Repository name</strong> field. You can also add an optional <strong>Description</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create repository from template</strong> to create your new repository. Congratulations, you now have a Docsy site repo!</p>
+</li>
+<li>
+<p>To test your copied site locally with Hugo, or make local edits, you&rsquo;ll also need to make a local copy of your new repository. To do this, use <code>git clone</code>, replacing <code>https://github.com/my/example.git</code> with your repo&rsquo;s web URL (don&rsquo;t forget to use <code>--recurse-submodules</code> or you won&rsquo;t pull down some of the code you need to generate a working site):</p>
+ <pre>
+ git clone --recurse-submodules --depth 1 <em>https://github.com/my/example.git</em>
+ </pre>
+</li>
+</ol>
+<p>You can now edit your local versions of the site&rsquo;s source files. To preview your site, go to your site root directory and run <code>hugo server</code> (<a href="#known-issues">see the known issues on MacOS</a>). By default, your site will be available at http://localhost:1313/. To push changes to your new repo, go to your site root directory and use <code>git push</code>.</p>
+<h4 id="using-the-command-line">Using the command line</h4>
+<p>To copy the example site:</p>
+<ol>
+<li>
+<p>Make a local working copy of the example site directly using <code>git clone</code>:</p>
+<pre><code>git clone https://github.com/google/docsy-example.git
+</code></pre>
+</li>
+<li>
+<p>Switch to the root of the cloned project, for example:</p>
+<pre><code> cd docsy-example
+</code></pre>
+</li>
+<li>
+<p>Get local copies of the project submodules so you can build and run your site locally:</p>
+<pre><code> git submodule update --init --recursive
+</code></pre>
+</li>
+<li>
+<p>Build your site:</p>
+<pre><code> hugo server
+</code></pre>
+</li>
+<li>
+<p>Preview your site in your browser at: http://localhost:1313/. You can use <code>Ctrl + c</code> to stop the Hugo server whenever you like.
+<a href="#known-issues">See the known issues on MacOS</a>.</p>
+</li>
+<li>
+<p>Now that you have a site running, you can push it to a new repository:</p>
+<ol>
+<li>
+<p><a href="https://help.github.com/en/articles/create-a-repo">Create a new repository in GitHub</a>
+for your site with your chosen repo name. For clarity you may also want to rename the root
+directory (<code>docsy-example</code>) of your working copy to match, though everything will still
+work even if you don&rsquo;t.</p>
+</li>
+<li>
+<p>Configure
+<a href="https://help.github.com/en/articles/configuring-a-remote-for-a-fork"><code>origin</code></a>
+in your project. From your site&rsquo;s root directory, set the URL for <code>origin</code> to your new
+repo (otherwise you&rsquo;ll be trying to push changes to <code>google/docsy</code> rather than to your repo):</p>
+<pre><code>  git remote set-url origin https://github.com/MY-SITE/EXAMPLE.git
+</code></pre>
+</li>
+<li>
+<p>Verify that your remote is configured correctly by running:</p>
+<pre><code>  git remote -v
+</code></pre>
+</li>
+<li>
+<p>Push your Docsy site to your repository:</p>
+<pre><code>  git push -u origin master
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="option-2-use-the-docsy-theme-in-your-own-site">Option 2: Use the Docsy theme in your own site</h3>
+<p>Specify the <a href="https://github.com/google/docsy">Docsy theme</a> like any other Hugo theme when creating or updating your site. This gives you all the theme-y goodness but you&rsquo;ll need to specify your own site structure.  You can either use the theme as a submodule (our recommended approach for easy updates), or just clone the theme into your project&rsquo;s <code>themes</code> subdirectory.</p>
+<p>Whichever approach you use, for simplicity we recommend copying and editing our <a href="#basic-site-configuration">example site configuration</a> for your project, or you may get Hugo errors for missing parameters and values when you try to build your site.</p>
+<h4 id="using-the-docsy-theme-as-a-submodule">Using the Docsy theme as a submodule</h4>
+<p>Adding Docsy as a Git submodule is our recommended approach for using the theme, as it means your project
+always refers to the Docsy repo version at your chosen revision, rather than you having your own copy in
+your repo that may result in merge conflicts when you try to update it. This is the approach used by our
+<a href="https://github.com/google/docsy-example">example project</a>.</p>
+<p>To create a new Hugo site project and then add the Docs theme as a submodule, run the following commands from your project&rsquo;s root directory.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new site myproject
+<span style="color:#204a87">cd</span> myproject
+git init
+git submodule add https://github.com/google/docsy.git themes/docsy
+<span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;theme = &#34;docsy&#34;&#39;</span> &gt;&gt; config.toml
+git submodule update --init --recursive
+</code></pre></div><p>To add the Docsy theme to an existing site, run the following commands from your project&rsquo;s root directory:</p>
+<pre tabindex="0"><code>git submodule add https://github.com/google/docsy.git themes/docsy
+echo 'theme = &quot;docsy&quot;' &gt;&gt; config.toml
+git submodule update --init --recursive
+</code></pre><h4 id="cloning-the-docsy-theme-to-your-projects-themes-subdirectory">Cloning the Docsy theme to your project&rsquo;s <code>themes</code> subdirectory</h4>
+<p>If you don&rsquo;t want to use a submodules (for example, if you want to customize and maintain your  own copy of the theme directly, or your deployment choice requires you to include a copy of the theme in your repository), you can clone the theme into your project.</p>
+<p>To clone Docsy into your project&rsquo;s <code>theme</code> folder, run the following commands from your project&rsquo;s root directory:</p>
+<pre tabindex="0"><code>cd themes
+git clone https://github.com/google/docsy
+</code></pre><p>If you want to build and/or serve your site <a href="/docs/deployment/#serving-your-site-locally">locally</a>, you also need to get local copies of the theme’s own submodules:</p>
+<pre tabindex="0"><code>git submodule update --init --recursive
+</code></pre><p>For more information, see <a href="https://gohugo.io/hugo-modules/theme-components/">Theme Components</a> on the <a href="https://gohugo.io">Hugo</a> site.</p>
+<h4 id="preview-your-site">Preview your site</h4>
+<p>To build and preview your site locally:</p>
+<pre tabindex="0"><code>cd myproject
+hugo server
+</code></pre><p>By default, your site will be available at http://localhost:1313/. <a href="#known-issues">See the known issues on MacOS</a>.</p>
+<h2 id="basic-site-configuration">Basic site configuration</h2>
+<p>Site-wide configuration details and parameters are defined in your project&rsquo;s <code>config.toml</code> file. These include your chosen Hugo theme (Docsy, of course!), project name, community links, Google Analytics configuration, and Markdown parser parameters. See the examples with comments in <a href="https://github.com/google/docsy-example/blob/master/config.toml"><code>config.toml</code> in the example project</a> for how to add this information. <strong>We recommend copying this <code>config.toml</code> and editing it even if you&rsquo;re just using the theme and not copying the entire Docsy example site</strong>.</p>
+<p>The Docsy example site comes with some defaults you may want to remove or customize straight away:</p>
+<h3 id="internationalization">Internationalization</h3>
+<p>The Docsy example site supports content in English, Norwegian and Farsi. You can find out more about how Docsy supports multi-language content in <a href="/docs/language/">Multi-language support</a>.</p>
+<p>If you don&rsquo;t intend to translate your site, you can remove the language switcher by removing the following lines from <code>config.toml</code>:</p>
+<pre tabindex="0"><code>[languages.no]
+title = &quot;Docsy&quot;
+description = &quot;Docsy er operativsystem for skyen&quot;
+languageName =&quot;Norsk&quot;
+contentDir = &quot;content/no&quot;
+time_format_default = &quot;02.01.2006&quot;
+time_format_blog = &quot;02.01.2006&quot;
+
+[languages.fa]
+title = &quot;اسناد گلدی&quot;
+description = &quot;یک نمونه برای پوسته داکسی&quot;
+languageName =&quot;فارسی&quot;
+contentDir = &quot;content/fa&quot;
+time_format_default = &quot;2006.01.02&quot;
+time_format_blog = &quot;2006.01.02&quot;
+</code></pre><p>To remove the translated source files, delete both the <code>docsy-example/content/no</code> and the  <code>docsy-example/content/fa</code> directory.</p>
+<h3 id="search">Search</h3>
+<p>By default, the Docsy example site uses its own <a href="https://cse.google.com/cse/all">Google Custom Search Engine</a>. To disable this site search, delete or comment out the following lines:</p>
+<pre tabindex="0"><code># Google Custom Search Engine ID. Remove or comment out to disable search.
+gcs_engine_id = &quot;011737558837375720776:fsdu1nryfng&quot;
+</code></pre><p>To use your own Custom Search Engine, replace the value in the <code>gcs_engine_id</code> with the ID of your own search engine. Or <a href="/docs/adding-content/navigation/#site-search-options">choose another search option</a>.</p>
+<h2 id="known-issues">Known issues</h2>
+<h3 id="macos-1">MacOS</h3>
+<h4 id="errors-too-many-open-files-or-fatal-error-pipe-failed">Errors: <code>too many open files</code> or <code>fatal error: pipe failed</code></h4>
+<p>By default, MacOS permits a small number of open File Descriptors. For larger sites, or when you&rsquo;re simultaneously running multiple applications,
+you might receive one of the following errors when you run <a href="https://gohugo.io/commands/hugo_server/"><code>hugo server</code></a> to preview your site locally:</p>
+<ul>
+<li>
+<p>POSTCSS v7 and earlier:</p>
+<pre tabindex="0"><code>ERROR 2020/04/14 12:37:16 Error: listen tcp 127.0.0.1:1313: socket: too many open files
+</code></pre></li>
+<li>
+<p>POSTCSS v8 and later:</p>
+<pre tabindex="0"><code>fatal error: pipe failed
+</code></pre></li>
+</ul>
+<h5 id="workaround">Workaround</h5>
+<p>To temporarily allow more open files:</p>
+<ol>
+<li>
+<p>View your current settings by running:</p>
+<pre tabindex="0"><code>sudo launchctl limit maxfiles
+</code></pre></li>
+<li>
+<p>Increase the limit to <code>65535</code> files by running the following commands. If your site has fewer files, you can set choose to set lower soft (<code>65535</code>) and
+hard (<code>200000</code>) limits.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo launchctl limit maxfiles <span style="color:#0000cf;font-weight:bold">65535</span> <span style="color:#0000cf;font-weight:bold">200000</span>
+<span style="color:#204a87">ulimit</span> -n <span style="color:#0000cf;font-weight:bold">65535</span>
+sudo sysctl -w kern.maxfiles<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">200000</span>
+sudo sysctl -w kern.maxfilesperproc<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">65535</span>
+</code></pre></div></li>
+</ol>
+<p>Note that you might need to set these limits for each new shell.
+<a href="https://www.google.com/search?q=mac+os+launchctl+limit+maxfiles+site%3Aapple.stackexchange.com&amp;oq=mac+os+launchctl+limit+maxfiles+site%3Aapple.stackexchange.com">Learn more about these limits and how to make them permanent</a>.</p>
+<h3 id="windows-subsystem-for-linux-wsl">Windows Subsystem for Linux (WSL)</h3>
+<p>If you&rsquo;re using WSL, ensure that you&rsquo;re running <code>hugo</code> on a Linux mount of the filesystem, rather than a Windows one, otherwise you may get unexpected errors.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<ul>
+<li><a href="/docs/adding-content/">Add content and customize your site</a></li>
+<li>Get some ideas from our <a href="https://github.com/google/docsy-example">Example Site</a> and other <a href="/docs/examples/">Examples</a>.</li>
+<li><a href="/docs/deployment/">Publish your site</a>.</li>
+</ul>
+
+        <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/docs/getting-started/quickstart-docker/">Docker Quickstart</a>
+                </h5>
+                <p>This page helps you to setup and run a local Docsy site with Docker in 5 minutes.</p>
+            </div>
+        
+    
+</div>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 The Kubeprober All Rights Reserved</small>
+        <small class="ml-1"><a href="https://www.erda.cloud" target="_blank" rel="noopener">Privacy Policy</a></small>
+	
+		<p class="mt-2"><a href="https://www.erda.cloud">About Erda</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js" integrity="sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC" crossorigin="anonymous"></script>
+
+
+
+<style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: { manual: true },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+
+
+<script src='/js/tabpane-persist.js'></script>
+
+
+
+<script src='/js/deflate.js'></script>
+
+
+ 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css" integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js" integrity="sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd" crossorigin="anonymous"></script>
+ 
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossorigin="anonymous"></script>
+
+
+<script defer src='https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js' integrity='sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl' crossorigin='anonymous' onload='renderMathInElement(document.body, null);'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.ae74a8d0abe987921cfaf58d6e96045fc661cde6a7bc701e1cf14657a3728909.js" integrity="sha256-rnSo0Kvph5Ic&#43;vWNbpYEX8ZhzeanvHAeHPFGV6NyiQk=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

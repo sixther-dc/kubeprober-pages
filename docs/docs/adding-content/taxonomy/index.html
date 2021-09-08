@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Taxonomy Support | Kubeprober</title>
+
+
+  <meta name="description" content="Structure the content using taxonomies like tags, categories, labels.
+">
+<meta property="og:title" content="Taxonomy Support" />
+<meta property="og:description" content="Structure the content using taxonomies like tags, categories, labels.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/adding-content/taxonomy/" /><meta property="article:section" content="docs" />
+
+<meta property="og:site_name" content="Kubeprober" />
+
+<meta itemprop="name" content="Taxonomy Support">
+<meta itemprop="description" content="Structure the content using taxonomies like tags, categories, labels.
+">
+
+<meta itemprop="wordCount" content="826">
+<meta itemprop="keywords" content="Tagging,Structuring Content,Labelling," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Taxonomy Support"/>
+<meta name="twitter:description" content="Structure the content using taxonomies like tags, categories, labels.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.aac3af70223c0376079ec26267814fb6b5e5c8c200dba630ab71d25aa35eb1bd.css" as="style">
+<link href="/scss/main.min.aac3af70223c0376079ec26267814fb6b5e5c8c200dba630ab71d25aa35eb1bd.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-00000000-0', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg t="1631104074107" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="2047" width="32" height="32" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style/></defs><path d="M512 627.2c-134.4.0-249.6-108.8-249.6-249.6C262.4 243.2 377.6 128 512 128s249.6 108.8 249.6 249.6S646.4 627.2 512 627.2" fill="#fe6d68" p-id="2048"/><path d="M377.6 896C243.2 896 128 780.8 128 646.4S236.8 396.8 377.6 396.8c134.4.0 249.6 108.8 249.6 249.6.0 134.4-108.8 249.6-249.6 249.6" fill="#5b8fd9" p-id="2049"/><path d="M646.4 896C512 896 396.8 787.2 396.8 646.4c0-134.4 108.8-249.6 249.6-249.6 134.4.0 249.6 108.8 249.6 249.6C896 780.8 780.8 896 646.4 896" fill="#f9d65d" p-id="2050"/></svg></span><span class="text-uppercase font-weight-bold">Kubeprober</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/#" ><i class='fas fa-home'></i><span>主页</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://docs.erda.cloud/1.2/manual/eco-tools/kubeprober/guides/install.html" target="_blank" ><i class='fas fa-file-alt'></i><span>文档</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://www.erda.cloud" target="_blank" ><i class='fas fa-cloud'></i><span>尔达云</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://www.terminus.io" target="_blank" ><i class='fas fa-globe'></i><span>端点</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://github.com/erda-project/kubeprober" target="_blank" ><i class='fab fa-github'></i><span>GitHub</span><span class='alert'>New!</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-docsadding-contenttaxonomy").addClass("active"); 
+    $("#td-section-nav #m-docsadding-contenttaxonomy-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsadding-contenttaxonomy").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-docsadding-contenttaxonomy-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsadding-contenttaxonomy-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+<input type="search" class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
+  <a href="/docs/" title="Welcome to Docsy" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <a href="/docs/getting-started/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedquickstart-docker-li">
+  <a href="/docs/getting-started/quickstart-docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedquickstart-docker"><span class="">Docker Quickstart</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsadding-content-li">
+  <a href="/docs/adding-content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsadding-content"><span class="">Content and Customization</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentcontent-li">
+  <a href="/docs/adding-content/content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentcontent"><span class="">Adding Content</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentlookandfeel-li">
+  <a href="/docs/adding-content/lookandfeel/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentlookandfeel"><span class="">Look and Feel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentnavigation-li">
+  <a href="/docs/adding-content/navigation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentnavigation"><span class="">Navigation and Search</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentversioning-li">
+  <a href="/docs/adding-content/versioning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentversioning"><span class="">Doc Versioning</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentshortcodes-li">
+  <a href="/docs/adding-content/shortcodes/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentshortcodes"><span class="">Docsy Shortcodes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contenticonsimages-li">
+  <a href="/docs/adding-content/iconsimages/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contenticonsimages"><span class="">Logos and Images</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentprint-li">
+  <a href="/docs/adding-content/print/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentprint"><span class="">Print Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentfeedback-li">
+  <a href="/docs/adding-content/feedback/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentfeedback"><span class="">Analytics, User Feedback, SEO</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contentrepository-links-li">
+  <a href="/docs/adding-content/repository-links/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contentrepository-links"><span class="">Repository Links</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadding-contenttaxonomy-li">
+  <a href="/docs/adding-content/taxonomy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsadding-contenttaxonomy"><span class="">Taxonomy Support</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslanguage-li">
+  <a href="/docs/language/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docslanguage"><span class="">Multi-language Support</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeployment-li">
+  <a href="/docs/deployment/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeployment"><span class="">Previews and Deployment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexamples-li">
+  <a href="/docs/examples/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsexamples"><span class="">Examples</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsupdating-li">
+  <a href="/docs/updating/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsupdating"><span class="">Updating Docsy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbest-practices-li">
+  <a href="/docs/best-practices/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsbest-practices"><span class="">Best Practices</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbest-practicessite-guidance-li">
+  <a href="/docs/best-practices/site-guidance/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsbest-practicessite-guidance"><span class="">Hugo Content Tips</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbest-practicesorganizing-content-li">
+  <a href="/docs/best-practices/organizing-content/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsbest-practicesorganizing-content"><span class="">Organizing Your Content</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscontribution-guidelines-li">
+  <a href="/docs/contribution-guidelines/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docscontribution-guidelines"><span class="">Contribution Guidelines</span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="https://github.com/google/docsy/edit/master/userguide/content/en/docs/Adding%20content/taxonomy.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+    <a href="https://github.com/google/docsy/new/master/userguide/content/en/docs/Adding%20content/taxonomy.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+    <a href="https://github.com/google/docsy/issues/new?title=Taxonomy%20Support" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+    
+      
+      <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+    
+
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#terminology">Terminology</a></li>
+    <li><a href="#parameters">Parameters</a></li>
+    <li><a href="#partials">Partials</a>
+      <ul>
+        <li><a href="#taxonomy_terms_article">taxonomy_terms_article</a></li>
+        <li><a href="#taxonomy_terms_cloud">taxonomy_terms_cloud</a></li>
+        <li><a href="#taxonomy_terms_clouds">taxonomy_terms_clouds</a></li>
+      </ul>
+    </li>
+    <li><a href="#multi-language-support-for-taxonomies">Multi language support for taxonomies</a></li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      
+        <h5 class="taxonomy-title">Categories</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/categories/taxonomies/" data-taxonomy-term="taxonomies"><span class="taxonomy-label">Taxonomies</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+	
+		
+
+
+
+  
+  
+    <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      
+        <h5 class="taxonomy-title">Tags</h5>
+      
+      <ul class="taxonomy-terms">
+        
+          <li><a class="taxonomy-term" href="/tags/labelling/" data-taxonomy-term="labelling"><span class="taxonomy-label">Labelling</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/structuring-content/" data-taxonomy-term="structuring-content"><span class="taxonomy-label">Structuring Content</span><span class="taxonomy-count">1</span></a></li>
+        
+          <li><a class="taxonomy-term" href="/tags/tagging/" data-taxonomy-term="tagging"><span class="taxonomy-label">Tagging</span><span class="taxonomy-count">1</span></a></li>
+        
+      </ul>
+    </div>
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/adding-content/">Content and Customization</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/adding-content/taxonomy/">Taxonomy Support</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Taxonomy Support</h1>
+	<div class="lead">Structure the content using taxonomies like tags, categories, labels.</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/categories/taxonomies/" data-taxonomy-term="taxonomies"><span class="taxonomy-label">Taxonomies</span></a></li>
+    
+  </ul>
+</div>
+
+			
+				
+
+
+<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    
+      <li><a class="taxonomy-term" href="/tags/tagging/" data-taxonomy-term="tagging"><span class="taxonomy-label">Tagging</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/tags/structuring-content/" data-taxonomy-term="structuring-content"><span class="taxonomy-label">Structuring Content</span></a></li>
+    
+      <li><a class="taxonomy-term" href="/tags/labelling/" data-taxonomy-term="labelling"><span class="taxonomy-label">Labelling</span></a></li>
+    
+  </ul>
+</div>
+
+			
+		
+		
+	</header>    
+	<p>Docsy supports Hugo&rsquo;s Taxonomies (see: <a href="https://gohugo.io/content-management/taxonomies/">https://gohugo.io/content-management/taxonomies/</a>) in its docs and blog section. You can see the default layout and can test the behavior of the generated links on this page.</p>
+<h2 id="terminology">Terminology</h2>
+<p>To understand the usage of taxonomies you should understand the following terminology:</p>
+<dl>
+<dt>Taxonomy</dt>
+<dd>a categorization that can be used to classify content - e.g.: Tags, Categories, Projects, People</dd>
+<dt>Term</dt>
+<dd>a key within the taxonomy - e.g. within projects: Project A, Project B</dd>
+<dt>Value</dt>
+<dd>a piece of content assigned to a term - e.g. a page of your site, that belongs to a specific project</dd>
+</dl>
+<p>A example taxonomy for a movie website you can find in the official Hugo docs: <a href="https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website">https://gohugo.io/content-management/taxonomies/#example-taxonomy-movie-website</a></p>
+<h2 id="parameters">Parameters</h2>
+<p>There are various parameter to control the functionality of taxonomies in the <code>config.toml</code>.</p>
+<p>By default taxonomies for <code>tags</code> and <code>categories</code> are enabled in Hugo (see: <a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies)">https://gohugo.io/content-management/taxonomies/#default-taxonomies)</a>. In Docsy taxonomies are <strong>disabled</strong> by default in the <code>config.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000">disableKinds</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;taxonomy&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;taxonomyTerm&#34;</span><span style="color:#000;font-weight:bold">]</span>
+</code></pre></div><p>If you want to enable taxonomies in Docsy you have to delete (or comment out) this line in your projects <code>config.toml</code>. Then the taxonomy pages for <code>tags</code> and <code>categories</code> will be generated by Hugo. If you want to use other taxonomies you have to define them in your <code>config.toml</code>. If you want to use beside your own taxonomies also the default taxonomies <code>tags</code> and <code>categories</code>, you also have to define them beside your own taxonomies. You need to provide both the plural and singular labels for each taxonomy.</p>
+<p>With the following example you define a additional taxonomy <code>projects</code> beside the default taxonomies <code>tags</code> and <code>categories</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000;font-weight:bold">[</span><span style="color:#000">taxonomies</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">tag</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;tags&#34;</span>
+<span style="color:#000">category</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;categories&#34;</span>
+<span style="color:#000">project</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;projects&#34;</span>
+</code></pre></div><p>You can use the following parameters in your projects <code>config.toml</code> to control the output of the assigned taxonomy terms for each article resp. page of your docs and/or blog section in Docsy or a &ldquo;tag cloud&rdquo; in Docsy&rsquo;s right sidebar:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#000;font-weight:bold">[</span><span style="color:#000">params</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">taxonomy</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000">taxonomyCloud</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;projects&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;tags&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#8f5902;font-style:italic"># set taxonomyCloud = [] to hide taxonomy clouds</span>
+<span style="color:#000">taxonomyCloudTitle</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;Our Projects&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Tag Cloud&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#8f5902;font-style:italic"># if used, must have same lang as taxonomyCloud</span>
+<span style="color:#000">taxonomyPageHeader</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;tags&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;categories&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#8f5902;font-style:italic"># set taxonomyPageHeader = [] to hide taxonomies on the page headers</span>
+</code></pre></div><p>The settings above would only show a taxonomy cloud for <code>projects</code> and <code>tags</code> (with the headlines &ldquo;Our Projects&rdquo; and &ldquo;Tag Cloud&rdquo;) in Docsy&rsquo;s right sidebar and the assigned terms for the taxonomies <code>tags</code> and <code>categories</code> for each page.</p>
+<p>To disable any taxonomy cloud you have to set the Parameter <code>taxonomyCloud = []</code> resp. if you doesn&rsquo;t want to show the assigned terms you have to set <code>taxonomyPageHeader = []</code>.</p>
+<p>As default the plural label of a taxonomy is used as it cloud title. You can overwrite the default cloud title with <code>taxonomyCloudTitle</code>. But if you do so, you have to define a manual title for each enabled taxonomy cloud (<code>taxonomyCloud</code> and <code>taxonomyCloudTitle</code> must have the same length!).</p>
+<p>If you doesn&rsquo;t set the parameters <code>taxonomyCloud</code> resp. <code>taxonomyPageHeader</code> the taxonomy clouds resp. assigned terms for all defined taxonomies will be generated.</p>
+<h2 id="partials">Partials</h2>
+<p>The by default used partials for displaying taxonomies are so defined, that you should be able to use them also easily in your own layouts.</p>
+<h3 id="taxonomy_terms_article">taxonomy_terms_article</h3>
+<p>The partial <code>taxonomy_terms_article</code> shows all assigned terms of an given taxonomy (partial parameter <code>taxo</code>) of an article respectively page (partial parameter <code>context</code>, most of the time the current page or context <code>.</code>).</p>
+<p>Example usage in <code>layouts/docs/list.html</code> for the header of each page in the docs section:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$context</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">range</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo_map</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Site.Taxonomies</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+  <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partial</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;taxonomy_terms_article.html&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">dict</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;context&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$context</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;taxo&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+</code></pre></div><p>This will gave you for each in the current page (resp. context) defined taxonomy a list with all assigned terms:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy taxonomy-terms-article taxo-categories&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h5</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Categories:<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h5</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-terms&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/categories/taxonomies/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomies&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Taxonomies<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy taxonomy-terms-article taxo-tags&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h5</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Tags:<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h5</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-terms&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/tags/tagging/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;tagging&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Tagging<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/tags/structuring-content/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;structuring-content&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Structuring Content<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/tags/labelling/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;labelling&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Labelling<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="taxonomy_terms_cloud">taxonomy_terms_cloud</h3>
+<p>The partial <code>taxonomy_terms_cloud</code> shows all used terms of an given taxonomy (partial parameter <code>taxo</code>) for your site (partial parameter <code>context</code>, most of the time the current page or context <code>.</code>) and with the parameter <code>title</code> as headline.</p>
+<p>Example usage in partial <code>taxonomy_terms_clouds</code> for showing all defined taxonomies and its terms:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$context</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">range</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo_map</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">:=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#c4a000">.Site.Taxonomies</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+  <span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">partial</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;taxonomy_terms_cloud.html&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">dict</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;context&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$context</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;taxo&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;title&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">humanize</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">$taxo</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">end</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">}}</span>
+</code></pre></div><p>As an example this will gave you for following HTML markup for the taxonomy <code>categories</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy taxonomy-terms-cloud taxo-categories&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h5</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Cloud of Categories<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h5</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-terms&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/categories/category-1/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;category-1&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>category 1<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-count&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>3<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/categories/category-2/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;category-2&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>category 2<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-count&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>1<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/categories/category-3/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;category-3&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>category 3<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-count&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>2<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-term&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;//localhost:1313/categories/category-4/&#34;</span> <span style="color:#c4a000">data-taxonomy-term</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;category-4&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-label&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>category 4<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;taxonomy-count&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>6<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h3 id="taxonomy_terms_clouds">taxonomy_terms_clouds</h3>
+<p>The partial <code>taxonomy_terms_clouds</code> is a wrapper for the partial <code>taxonomy_terms_cloud</code> with the only parameter <code>context</code> (most of the time the current page or context <code>.</code>) and checks the taxonomy parameters of you projects <code>config.toml</code> to loop threw all listed taxonomies in the parameter <code>taxonomyCloud</code> resp. all defined taxonomies of your page, if <code>taxonomyCloud</code> isn&rsquo;t set.</p>
+<h2 id="multi-language-support-for-taxonomies">Multi language support for taxonomies</h2>
+<p>The taxonomy terms associated content gets only counted and linked WITHIN the language! The control parameters for the taxonomy support can also get assigned language specific.</p>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 The Kubeprober All Rights Reserved</small>
+        <small class="ml-1"><a href="https://www.erda.cloud" target="_blank" rel="noopener">Privacy Policy</a></small>
+	
+		<p class="mt-2"><a href="https://www.erda.cloud">About Erda</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js" integrity="sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC" crossorigin="anonymous"></script>
+
+
+
+<style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: { manual: true },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+
+
+<script src='/js/tabpane-persist.js'></script>
+
+
+
+<script src='/js/deflate.js'></script>
+
+
+ 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css" integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js" integrity="sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd" crossorigin="anonymous"></script>
+ 
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossorigin="anonymous"></script>
+
+
+<script defer src='https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js' integrity='sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl' crossorigin='anonymous' onload='renderMathInElement(document.body, null);'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.ae74a8d0abe987921cfaf58d6e96045fc661cde6a7bc701e1cf14657a3728909.js" integrity="sha256-rnSo0Kvph5Ic&#43;vWNbpYEX8ZhzeanvHAeHPFGV6NyiQk=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
