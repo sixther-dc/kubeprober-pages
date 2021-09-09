@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeprober – Getting Started</title>
-    <link>https://sixther-dc.github.io/kubeprober-pages/cn/docs/getting-started/</link>
+    <link>https://k.erda.cloud/cn/docs/getting-started/</link>
     <description>Recent content in Getting Started on Kubeprober</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 30 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="https://sixther-dc.github.io/kubeprober-pages/cn/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://k.erda.cloud/cn/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Docker Quickstart</title>
-      <link>https://sixther-dc.github.io/kubeprober-pages/cn/docs/getting-started/quickstart-docker/</link>
+      <link>https://k.erda.cloud/cn/docs/getting-started/quickstart-docker/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sixther-dc.github.io/kubeprober-pages/cn/docs/getting-started/quickstart-docker/</guid>
+      <guid>https://k.erda.cloud/cn/docs/getting-started/quickstart-docker/</guid>
       <description>
         
         
@@ -86,9 +86,9 @@ changes will be live-reloaded in your browser.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Learn about &lt;a href=&#34;https://sixther-dc.github.io/kubeprober-pages/docs/getting-started/&#34;&gt;basic setup and configurations for Docsy&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sixther-dc.github.io/kubeprober-pages/docs/adding-content/&#34;&gt;Add content and customize your site&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sixther-dc.github.io/kubeprober-pages/docs/deployment/&#34;&gt;Publish your site&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Learn about &lt;a href=&#34;https://k.erda.cloud/docs/getting-started/&#34;&gt;basic setup and configurations for Docsy&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://k.erda.cloud/docs/adding-content/&#34;&gt;Add content and customize your site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://k.erda.cloud/docs/deployment/&#34;&gt;Publish your site&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

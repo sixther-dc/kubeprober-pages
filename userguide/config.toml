@@ -1,4 +1,4 @@
-baseURL = "https://sixther-dc.github.io/kubeprober-pages/"
+baseURL = "https://k.erda.cloud/"
 title = "Kubeprober"
 
 enableRobotsTXT = true

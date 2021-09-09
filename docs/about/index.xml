@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeprober – About Erda</title>
-    <link>https://sixther-dc.github.io/kubeprober-pages/about/</link>
+    <link>https://k.erda.cloud/about/</link>
     <description>Recent content in About Erda on Kubeprober</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://sixther-dc.github.io/kubeprober-pages/about/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://k.erda.cloud/about/index.xml" rel="self" type="application/rss+xml" />
     
     
       

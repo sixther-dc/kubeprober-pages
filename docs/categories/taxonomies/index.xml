@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubeprober – Taxonomies</title>
-    <link>https://sixther-dc.github.io/kubeprober-pages/categories/taxonomies/</link>
+    <link>https://k.erda.cloud/categories/taxonomies/</link>
     <description>Recent content in Taxonomies on Kubeprober</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="https://sixther-dc.github.io/kubeprober-pages/categories/taxonomies/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://k.erda.cloud/categories/taxonomies/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Taxonomy Support</title>
-      <link>https://sixther-dc.github.io/kubeprober-pages/docs/adding-content/taxonomy/</link>
+      <link>https://k.erda.cloud/docs/adding-content/taxonomy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sixther-dc.github.io/kubeprober-pages/docs/adding-content/taxonomy/</guid>
+      <guid>https://k.erda.cloud/docs/adding-content/taxonomy/</guid>
       <description>
         
         
