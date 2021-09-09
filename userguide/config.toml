@@ -69,15 +69,16 @@ anchor = "smart"
     url = "https://www.erda.cloud"
     pre = "<i class='fas fa-cloud'></i>"
 [[menu.cn]]
-    name = "端点"
-    weight = 45
-    url = "https://www.terminus.io"
-    pre = "<i class='fas fa-globe'></i>"
-[[menu.cn]]
     name = "GitHub"
     weight = 50
     url = "https://github.com/erda-project/kubeprober"
     pre = "<i class='fab fa-github'></i>"
+[[menu.cn]]
+    name = "Roadmap"
+    weight = 55
+    url = "https://github.com/erda-project/kubeprober/blob/master/docs/roadmap_CN.md"
+    pre = "<i class='fas fa-road'></i>"
+    post = "<span class='alert'>New!</span>"
 
 [[menu.en]]
     name = "Home"
@@ -95,16 +96,16 @@ anchor = "smart"
     url = "https://www.erda.cloud"
     pre = "<i class='fas fa-cloud'></i>"
 [[menu.en]]
-    name = "Terminus"
-    weight = 45
-    url = "https://www.terminus.io"
-    pre = "<i class='fas fa-globe'></i>"
-[[menu.en]]
     name = "GitHub"
     weight = 50
     url = "https://github.com/erda-project/kubeprober"
     pre = "<i class='fab fa-github'></i>"
-
+[[menu.en]]
+    name = "Roadmap"
+    weight = 55
+    url = "https://github.com/erda-project/kubeprober/blob/master/docs/roadmap.md"
+    pre = "<i class='fas fa-road'></i>"
+    post = "<span class='alert'>New!</span>"
 
 [services]
 [services.googleAnalytics]
